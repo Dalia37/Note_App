@@ -46,13 +46,8 @@ private EditText searchEditText;
         MeetAdapter adapter = new MeetAdapter(results, new OnTaskClickListener() {
             @Override
             public void onClickLisener(Tasks tasks) {
-//                Toast.makeText(MeetActivity.this, "clicked", Toast.LENGTH_SHORT).show();
-//                Toast.makeText(MeetActivity.this, "ggggggg", Toast.LENGTH_SHORT).show();
-                Intent addTask= new Intent(getApplicationContext() , ViewTaskActivity.class);
-                addTask.putExtra("meetId",tasks.getId());
-                addTask.putExtra("meetName",tasks.getTastName());
-                startActivity(addTask);
-
+                Toast.makeText(MeetActivity.this, "clicked", Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(getApplicationContext(), ViewTaskActivity.class));
 
             }
         }, rv);

@@ -48,6 +48,7 @@ public class ListsActivity extends AppCompatActivity {
          adapter = new ListsAdapter(lists, new OnItemCilckListener() {
             @Override
             public void onItemClick(Lists lists) {
+                Toast.makeText(ListsActivity.this, "clicked ", Toast.LENGTH_SHORT).show();
                 Intent addTask= new Intent(getApplicationContext() , CategoryListActivity.class);
                 addTask.putExtra("categoryID",lists.getId());
                 addTask.putExtra("categoryName",lists.getListname());
